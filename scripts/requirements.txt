@@ -1,0 +1,3 @@
+# Only ignition_screenshot needs Playwright (uses installed Chrome/Edge via
+# channel fallbacks — no browser download). All other tools are stdlib-only.
+playwright>=1.40

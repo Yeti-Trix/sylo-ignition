@@ -1,0 +1,19 @@
+{
+  "allow_writes": true,
+  "allow_scan": true,
+  "allow_project_create": true,
+  "projects": [
+    {
+      "name": "SyloSandbox",
+      "enabled": true,
+      "label": "Agent scratch project — safe to experiment"
+    },
+    {
+      "name": "Example",
+      "enabled": false,
+      "label": "Ignition demo project — read-only by default"
+    }
+  ],
+  "updated_at": "2026-08-30T22:00:00Z",
+  "notes": "Operator-managed. sylo-ignition mutating tools enforce this file in Python — the agent cannot edit it. Add a project here to let the agent write its files; keep production projects out unless you want that. allow_scan gates POST /data/api/v1/scan/* (hot-apply of disk edits; scans ALL projects). allow_project_create gates creating NEW projects (isolated, low-risk)."
+}

@@ -1,0 +1,46 @@
+{
+  "name": "sylo-ignition",
+  "version": "0.1.0",
+  "description": "Ignition 8.3 gateway + project assistant — file-based resource authoring, REST scan/hot-reload, tag scaffolding, screenshot-verified Perspective UI",
+  "type": "module",
+  "keywords": [
+    "pi-package"
+  ],
+  "pi": {
+    "extensions": [
+      "./extensions/index.ts"
+    ],
+    "skills": [
+      "./skills/ignition",
+      "./skills/ignition-reference"
+    ]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "^0.84.2"
+  },
+  "dependencies": {
+    "typebox": "^1.1.24"
+  },
+  "license": "MIT",
+  "gitHead": "f05700bce9bf8ef8574894f24a8a3fa71da11d61",
+  "dist": {
+    "integrity": "sha512-TZQaPVwyV8vcMQOV7Oa/GeQGtr+W3vIN3AlG3m3iQvUcIy4u9hDDE0kb4WOZHMJH05KCj/jKGIM9G/ZjumUsHA==",
+    "shasum": "f1e03d13b3b95da6b0c0a9fd3595cb8f5fc2ba41",
+    "tarball": "https://registry.npmjs.org/sylo-ignition/-/sylo-ignition-0.1.0.tgz",
+    "fileCount": 28,
+    "unpackedSize": 118677,
+    "signatures": [
+      {
+        "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+        "sig": "MEYCIQDRNu/ocosEo1RAAnKzjvIB2xu/S+KLK5vmm0Y6uzlvygIhAMtbI0Vou7mRlwEXfyjcGwWwzrlXdft2KOL4LYOaKxmk"
+      }
+    ]
+  },
+  "directories": {},
+  "maintainers": [
+    {
+      "name": "yeti-trix",
+      "email": "spencer.current@gmail.com"
+    }
+  ]
+}

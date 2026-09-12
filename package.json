@@ -1,6 +1,6 @@
 {
   "name": "sylo-ignition",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Ignition 8.3 gateway + project assistant — file-based resource authoring, REST scan/hot-reload, tag scaffolding, screenshot-verified Perspective UI",
   "type": "module",
   "keywords": [

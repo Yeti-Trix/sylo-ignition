@@ -23,3 +23,10 @@ disk + REST scan** — no Designer automation, no zip import/export.
 
 See `features_tracker/active/2026-08-30_16-59-56_sylo_ignition_package.md`
 for the design record.
+
+
+## Install
+
+`pi install npm:sylo-ignition` — or from the **Capability manager → Pi.dev package catalog** in Sylo (it appears in the Sylo packages strip).
+
+Releases publish automatically from GitHub Actions (npm trusted publishing, with provenance): bump `version` in `package.json`, commit, tag `vX.Y.Z`, push the tag.

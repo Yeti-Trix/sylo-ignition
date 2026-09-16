@@ -1,3 +1,6 @@
 # Only ignition_screenshot needs Playwright (uses installed Chrome/Edge via
 # channel fallbacks — no browser download). All other tools are stdlib-only.
 playwright>=1.40
+
+# MCP server (server/server.py) — pin to the stable v1 line.
+mcp>=1.10,<2

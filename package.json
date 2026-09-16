@@ -1,25 +1,19 @@
 {
   "name": "sylo-ignition",
-  "version": "0.1.1",
-  "description": "Ignition 8.3 gateway + project assistant — file-based resource authoring, REST scan/hot-reload, tag scaffolding, screenshot-verified Perspective UI",
-  "type": "module",
+  "version": "0.2.0",
+  "description": "Ignition 8.3 gateway + project assistant — harness-neutral MCP server (Claude Code, Codex, pi via pi-mcp-adapter): file-based resource authoring, REST scan/hot-reload, tag scaffolding, screenshot-verified Perspective UI",
   "keywords": [
-    "pi-package"
+    "pi-package",
+    "mcp"
   ],
   "pi": {
-    "extensions": [
-      "./extensions/index.ts"
+    "mcp": [
+      "./.mcp.json"
     ],
     "skills": [
       "./skills/ignition",
       "./skills/ignition-reference"
     ]
-  },
-  "peerDependencies": {
-    "@earendil-works/pi-coding-agent": "^0.84.2"
-  },
-  "dependencies": {
-    "typebox": "^1.1.24"
   },
   "license": "MIT",
   "gitHead": "f05700bce9bf8ef8574894f24a8a3fa71da11d61",

@@ -54,7 +54,7 @@ skill's version notes.
 5. **`ignition_resource_write`** — allowlist-gated atomic write. New folders get a
    scan-compatible `resource.json` scaffold automatically.
 6. **`ignition_scan`** (scope projects) — hot-apply into the gateway + Designer.
-7. **`ignition_screenshot`** → `analyze_image` — visual verification / design critique loop.
+7. **`ignition_screenshot`** — visual verification / design critique loop: read the returned PNG with your harness's own vision (Claude Code / Codex read images natively; on pi use `analyze_image`).
 8. If something didn't apply: **`ignition_gateway_logs`** (search "scan" / "resource").
 
 Use **`ignition_project_create`** for a scratch project, and **`ignition_backup`**
@@ -117,9 +117,8 @@ Designer.
   another reason the Designer rule matters.
 - **No tag VALUES via REST**: 8.3 REST manages tag *definitions* (tags export/import
   JSON); live values go through scripting/OPC-UA — currently out of scope.
-- The full offline 8.3 User Manual (1,566 pages) + SDK docs live in the Sylo repo at
-  `packages/sylo-ignition/references/` — grep them via the **ignition-reference** skill
-  before guessing formats.
+- The full offline 8.3 User Manual (1,566 pages) + SDK docs live in this repo at
+  `references/` — grep them via the **ignition-reference** skill before guessing formats.
 
 ## Design quality (operator standard: beautiful, intuitive, clean)
 

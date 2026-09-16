@@ -27,6 +27,25 @@ for the design record.
 
 ## Install
 
-`pi install npm:sylo-ignition` — or from the **Capability manager → Pi.dev package catalog** in Sylo (it appears in the Sylo packages strip).
+Harness-neutral MCP server — same package, three ways:
+
+**pi** (via pi-mcp-adapter): `pi install npm:sylo-ignition`. The adapter reads the
+bundled `.mcp.json` (declared as `pi.mcp` in package.json) and registers the
+server automatically. Set `toolPrefix: "none"` in adapter settings so tool names
+stay exactly `ignition_*` as the skills reference them.
+
+**Claude Code**: git clone the repo — Claude Code picks up the root `.mcp.json`
+natively. Install script deps: `pip install -r scripts/requirements.txt`.
+
+**Codex**: git clone, then `codex mcp add ignition -- python server/server.py`.
+
+Python: 3.12+ recommended (Windows: `python`, otherwise `python3`). Set
+`SYLO_PYTHON` to override the interpreter used for the wrapped scripts.
+Connection config lives outside any repo at `~/.ignition-sylo/config.json` —
+setup recipe in the `ignition` skill.
 
 Releases publish automatically from GitHub Actions (npm trusted publishing, with provenance): bump `version` in `package.json`, commit, tag `vX.Y.Z`, push the tag.
+
+> 0.2.0: the pi TypeScript extension was removed — the MCP server
+> (`server/server.py`, official `mcp` SDK) is now the only tool surface. Tools,
+> args, JSON contracts, timeouts and allowlist enforcement are unchanged.
